@@ -1,18 +1,13 @@
-name: CypressTests1
 on: [push, workflow_dispatch]
-
 jobs:
-  cypress:
-    run-on: ubuntu-latest # uruchamia na najnowszym ubuntu uwaga w chmurze !!! nie musisz go miec
-
+  cypress: 
+    run-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4 # krok 1 zrob checkout z repo z ktorego bierzesz kod 
-      - uses: actions/setup-node@v4 # krok 2 zainstaluj srodowisko nodejs
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v4
         with:
-          node-version: 24 # sami okreslamy
+          node-version: 24
           cache: npm
-
-      - run: npm ci # uruchom skrypty npm w srodowisku ciaglej integracji 
+       -run: npm ci # uruchom skrypty npm w srodowisku ciaglej integracji 
       - run: npx cypress run
       # run: npm run mytests
-      
