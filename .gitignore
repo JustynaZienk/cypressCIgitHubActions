@@ -1,1 +1,7 @@
 node_modules
+#artifacts
+cypresc/videos
+cypress/reports/
+cypress/screenshots/
+
+gotowetesty
