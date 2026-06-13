@@ -59,5 +59,9 @@ Cypress.Commands.add("verifyLoggedUser", (loggedUser, buttonText, url) => {
   cy.window().then(($win) => {
     expect($win.localStorage.getItem("logged")).to.eq("1");
     expect($win.localStorage.getItem("username")).to.eq(loggedUser);
-  });
+  }); 
+});
+Cypress.Commands.add("logoutFromApp", (button, url) => {
+  cy.get('#logout').should("have.text", button).click();
+  cy.url().should("equal", url);
 });

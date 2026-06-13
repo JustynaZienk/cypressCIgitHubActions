@@ -4,7 +4,7 @@ export const parametersAccountManager = {
     subtitleMainPage: "Zaloguj się do naszego super bezpiecznego systemu!",
     subtitleRegisterPage : "Załóż konto w naszym systemie!",
     formUrl: "https://frontendpodyplomowe.github.io/logging",
-    linkText: "Zarejestruj się!ccc",
+    linkText: "Zarejestruj się!",
     buttonText: "Zaloguj się!",
     buttonSetAccount: "Załóż konto",
     backToLoginText: "Wróć do logowania!",
